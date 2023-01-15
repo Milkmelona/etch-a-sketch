@@ -1,5 +1,48 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
 .board {
-height: 400px;
-width: 400px;
+height: 600px;
+width: 600px;
 display: grid;
+box-shadow:rgba(185, 175, 175, 0.24) 3px 6px 15px;;
+margin-bottom: 25px;
+align-self: center;
+}
+.middlecontainer {
+    display: flex;
+}
+.sidebody {
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+gap: 30px;
+}
+input[type='range'] {
+    background-color: whitesmoke;
+}
+body {
+    background-color: antiquewhite;
+    height: 100vh;
+}
+input[type='color'] {
+    height: 100px;
+    width: 100px;
+    border: none;
+}
+.button {
+    border: solid;
+    border-width: thin;
+    border-radius: 30px;
+    font-size: 30px;
+    padding: 8px 30px;
+}
+.bottomcontainer {
+    gap: 20px;
+    display: flex;
 }
