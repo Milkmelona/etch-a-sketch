@@ -1,5 +1,6 @@
-function adjustSize(size){
 let board = document.querySelector(".board");
+
+function adjustSize(size){
 board.style.gridTemplateColumns = `repeat(${size}, 1fr)`
 board.style.gridTemplateRows = `repeat(${size}, 1fr)`
 
@@ -15,7 +16,6 @@ function changeColor(e){
     e.target.style.backgroundColor = colorPicked.value
 }
 function clearColor() {
-    let board = document.querySelector(".board");
     let squares = board.querySelectorAll("div");
     squares.forEach((div) => (div.style.backgroundColor = "white"));
 }
@@ -25,5 +25,9 @@ slider.onchange = e => updateSliderValue(e.target.value)
 function updateSliderValue (value) {
     sliderValue.innerHTML = `${value} x ${value}`;
     adjustSize(value);
+    resetGrid();
 }
-
+function resetGrid(){
+    let squares = board.querySelectorAll("div");
+    squares.forEach((div) => (div.style.backgroundColor = "white"));
+}
