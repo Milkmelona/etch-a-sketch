@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ETCH-A-SKETCH</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="title">ETCH-A-SKETCH</h1>
-    <div class="board"></div>
+    <div class="container">
+        <h1 class="title">ETCH-A-SKETCH</h1>
+        <div class="middlecontainer">
+        <div class="sidebody">
+        <input type="color" id="colorpicker" value="#e28d8d">
+        <div id="slidervalue">0 x 0</div>
+        <input type="range" id="slider" value="0" min="1" max="64">
+        </div>
+        <div class="board"></div>
+        </div>
+        <div class="bottomcontainer">
+            <button class="button" id="clearbtn" onclick="clearColor()">Clear</button>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
